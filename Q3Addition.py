@@ -15,6 +15,9 @@ try:
 
     if int(d) == int(g):
      print("correct good work")
+    else:
+     print("answer incorrect")
+     
 
 except: ValueError
 print("use a whole number next time")
