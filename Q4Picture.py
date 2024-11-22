@@ -2,33 +2,27 @@
 # It can be anything you like, but you must use at least 2 different types of shapes and 3 different colors.
 import pygame
 
-from pygame import Color, Rect
+from pygame import Color, Rect, rect
 from pygame import draw
 from pygame import display
 
 SCREEN_SIZE = (500, 500)
 
-# initialize pygame modules
+
 pygame.init()
-
-# get a surface for graphics display
 gameDisplay = display.set_mode(SCREEN_SIZE)
+gameDisplay.fill(Color('light blue'))
 
-# background - color of the sky
-gameDisplay.fill(Color('lightblue'))
+draw.polygon(gameDisplay, Color('dark grey'), [(100, 200), (400, 200), (250, 50)])
+draw.polygon(gameDisplay, Color('grey'), [(100, 200), (400, 200), (150, 50)])
+draw.polygon(gameDisplay, Color('black'), [(100, 200), (200, 200), (150, 50)])
 
-# draw a house with a roof
-draw.rect(gameDisplay, Color('brown'), Rect(100, 200, 300, 200))
-draw.polygon(gameDisplay, Color('black'), [(100, 200), (400, 200), (250, 50)])
 
-# draw green grass
-draw.rect(gameDisplay, Color('green'), Rect(0, 400, 500, 100))
+draw.circle(gameDisplay, Color('black'), (410, 180), 30)
+draw.rect(gameDisplay, Color('dark grey'),Rect(210, 200, 50, 200,))
+draw.rect(gameDisplay, Color('red'),Rect(200, 200, 75, 30,))
 
-# draw a sun
-draw.circle(gameDisplay, Color('yellow'), (50, 50), 50)
 
-# show the graphics on the screen
+
 display.flip()
-
-# Wait for user input before closing the window
 input("Press enter to exit")
