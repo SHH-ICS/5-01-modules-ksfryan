@@ -19,7 +19,7 @@ try:
      print("answer incorrect")
      
 
-except: ValueError
-print("use a whole number next time")
+except ValueError:
+    print("use a whole number next time")
      
 
